@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"servo" [label="servo"];
+"servo_2" [label="servo_2"];
+"tube" [label="tube"];
+"tube_2" [label="tube_2"];
+"link" [label="link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"servo" -> "base" [label="xyz: 0.0369187 -0.0263754 0.0393019 \nrpy: 3.14159 5.30286e-16 0.485838"]
+"base" -> "servo_2"
+"servo_2" -> "shoulder" [label="xyz: 0 -0.016 -0.02681 \nrpy: -1.5708 -0.778321 -3.14159"]
+"shoulder" -> "tube"
+"tube" -> "elbow" [label="xyz: -0.185 3.46945e-17 3.46945e-18 \nrpy: -1.39083e-14 -1.74943e-15 -1.57079"]
+"elbow" -> "tube_2"
+"tube_2" -> "gripper" [label="xyz: -0.185035 -0.010845 -0.00985936 \nrpy: -1.5708 2.04454e-15 6.00785e-14"]
+"gripper" -> "link"
+}

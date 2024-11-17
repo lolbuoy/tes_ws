@@ -1,0 +1,6 @@
+# Default initial positions for onshape's ros2_control fake system
+
+initial_positions:
+  base: 0
+  elbow: 0
+  shoulder: 0

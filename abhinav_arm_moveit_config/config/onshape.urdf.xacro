@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="onshape">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import onshape urdf file -->
+    <xacro:include filename="$(find abhinav_arm)/description/urdf/mourya.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="onshape.ros2_control.xacro" />
+
+
+    <xacro:onshape_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>
